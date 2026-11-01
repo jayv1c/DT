@@ -1,4 +1,4 @@
-const CACHE_NAME = 'diario-tecnico-pwa-v7-career-flow';
+const CACHE_NAME = 'diario-tecnico-pwa-v13-collapsed-stats-seasons';
 const APP_SHELL = [
   './',
   './index.html',

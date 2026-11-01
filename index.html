@@ -21,6 +21,7 @@
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif}
+body{font-weight:500}
 .board{background:var(--board);color:var(--boardink);padding:20px 16px 18px;border-bottom:4px solid var(--yel)}
 .wrap{max-width:860px;margin:0 auto}
 .ident{display:flex;gap:12px;flex-wrap:wrap;align-items:baseline}
@@ -37,7 +38,7 @@ nav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--acc)}
 main{max-width:860px;margin:0 auto;padding:16px}
 h2{font:700 24px 'Barlow Condensed',sans-serif;margin:4px 0 12px}
 form{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:20px;align-items:end}
-label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);gap:2px}
+label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);font-weight:600;gap:2px}
 input,select{font:inherit;color:var(--ink);background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:8px;min-width:0}
 .main input{width:100%}
 .btn{background:var(--acc);color:var(--onacc);border:0;border-radius:6px;padding:10px 14px;font:600 16px Barlow,sans-serif;cursor:pointer}
@@ -135,7 +136,7 @@ nav#tabs>button[aria-selected=true]{color:var(--acc);font-weight:700;border-bott
 .mrow details.ed{margin:0;padding:0 12px 8px;border-top:1px solid var(--line)}
 .mrow details.ed>summary{padding-top:8px}
 .qa{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 12px}
-.qa button{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:12px 4px;color:var(--ink);font:500 13px Barlow,sans-serif;cursor:pointer;text-align:center}
+.qa button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;height:86px;box-sizing:border-box;background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:10px 4px;color:var(--ink);font:600 13px Barlow,sans-serif;cursor:pointer;text-align:center}
 .qa svg{width:24px;height:24px;color:var(--acc)}
 .hero{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;background:var(--board);color:var(--boardink);border-radius:14px;padding:16px 18px;margin:0 0 12px}
 .hero .big{display:block;font:700 66px/.95 'Barlow Condensed',sans-serif;font-variant-numeric:tabular-nums}
@@ -155,7 +156,7 @@ nav#tabs>button[aria-selected=true]{color:var(--acc);font-weight:700;border-bott
 .tile.wide span{margin:0 0 2px}.tile.wide b.nm{font-size:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tile.wide em{font-style:normal;font-size:13px;color:var(--acc);font-weight:600}
 .card.cp{padding:0 0 4px}
 .hl1{margin:0 0 6px;font-size:15px}.big2{font:700 34px 'Barlow Condensed',sans-serif;margin-right:4px}
-.cab{background:linear-gradient(180deg,#232a3a,#161b27);border-radius:14px;padding:6px 8px 12px;margin:8px 0 12px;color:#eef1f5}
+.cab{background:linear-gradient(180deg,#e4c18f,#bd8950);border-radius:14px;padding:6px 8px 12px;margin:8px 0 12px;color:#30251a}
 .shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:16px 2px 0;align-items:end}
 .plank{height:10px;margin:0 -2px 8px;border-radius:2px;background:linear-gradient(#b27f45,#7b5128);box-shadow:0 4px 8px rgba(0,0,0,.4)}
 .ti{text-align:center;min-width:0}.tw{position:relative;display:inline-block;filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
@@ -343,7 +344,6 @@ button,.btn,.sm,.chip2,.swapb{max-width:100%;min-width:0;white-space:normal;over
  .tools .chips{flex:1 1 100%;gap:5px}
  .chip2{padding:6px 9px;font-size:12px}
  .row{grid-template-columns:auto minmax(0,1fr) auto;gap:6px}
- .row>:last-child:nth-child(4){display:none}
  .player-modal-actions{justify-content:stretch}
  .player-modal-actions>*{flex:1}
 }
@@ -385,12 +385,12 @@ form>*{min-width:0}
  .lr{grid-template-columns:minmax(68px,1.5fr) repeat(5,minmax(28px,1fr));gap:3px}
  .hls{grid-template-columns:minmax(0,1fr)}
 }
-.sb{gap:6px;padding:9px 10px 3px}
+.sb{gap:5px;padding:6px 8px 1px}
 .sb .t{font-size:14px;gap:2px}
 .sb .mini-crest{width:22px;height:22px;margin:0 2px}
-.sc2{gap:6px;padding:1px 10px;font-size:34px}
+.sc2{gap:5px;padding:0 8px;font-size:30px}
 .sc2 i{font-size:18px}
-.mm{gap:6px;padding:0 9px 6px 10px;font-size:12px;flex-wrap:wrap}
+.mm{gap:5px;padding:0 8px 4px;font-size:11px;flex-wrap:wrap}
 .mrow details.ed{padding:0 10px 6px}
 main{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
 nav#tabs{min-height:66px;padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
@@ -399,11 +399,26 @@ nav#tabs>button{padding-top:7px;padding-bottom:7px}
 .ret-search{display:block;max-width:480px;margin:8px 0}
 .ret-search input{display:block;width:100%;margin-top:4px}
 .next-action{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 16px;margin:0 0 10px;border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:12px;background:var(--surf)}
-.next-action>div{min-width:0}.next-action>div>span{display:block;color:var(--acc);font-size:11px;font-weight:700;letter-spacing:.06em}.next-action b{display:block;font:700 22px/1.1 'Barlow Condensed',sans-serif;margin:3px 0}.next-action p{margin:0;color:var(--mute);font-size:13px}.next-action .btn{flex:0 0 auto}
-.match-actions,.backup-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.match-actions .btn{flex:1 1 180px}.match-actions .sm{min-height:44px;padding:10px 14px}
+.next-action>div{min-width:0}.next-action>div>span{display:block;color:var(--acc);font-size:11px;font-weight:700;letter-spacing:.06em}.next-action b{display:block;font:700 22px/1.1 'Barlow Condensed',sans-serif;margin:3px 0}.next-action p{margin:0;color:var(--mute);font-size:13px}.next-action .btn{flex:0 0 auto;padding:7px 10px;font-size:14px;border-radius:8px}
+.match-actions,.backup-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.match-actions .btn{flex:1 1 180px}.match-actions .sm{display:none}
 .backup-actions{margin:8px 0 14px}.backup-actions .btn,.backup-actions .sm{flex:1 1 180px;text-align:center}.bkd textarea#bk{min-height:150px;height:180px}
 .stats-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0}.stats-filters label{min-width:0}.stats-filters select{width:100%}
-@media(max-width:480px){.next-action{align-items:stretch;flex-direction:column;gap:10px}.next-action .btn{width:100%}.stats-filters{grid-template-columns:minmax(0,1fr)}}
+.rating{display:inline-block;min-width:2.4em;text-align:center;border-radius:5px;padding:1px 5px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+.rating.r0,.rating.r1,.rating.r2,.rating.r3,.rating.r4,.rating.r5{background:#e53935}.rating.r6{background:#f28c28}.rating.r65{background:#e3b800}.rating.r7{background:#00b83f}.rating.r8{background:#00a9bc}.rating.r9,.rating.r10{background:#3549e8}
+.rating.r-none{background:var(--line);color:var(--mute)}
+.season-awards{margin:8px 0;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.season-awards>summary{font:700 18px 'Barlow Condensed',sans-serif;color:var(--acc)}.season-awards .row{padding:7px 0}
+.next-action .btn{background:var(--bg);color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:700;white-space:nowrap;width:auto}
+.group-place{max-width:260px;margin-top:8px}.group-place select{width:100%}.group-route{margin:4px 0 0;font-size:13px;color:var(--acc);font-weight:600}
+.import-squad{display:flex;align-items:end;gap:8px;flex-wrap:wrap;margin:8px 0 14px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surf)}.import-squad label{flex:1 1 220px;max-width:420px;margin:0}.import-squad .sm{white-space:nowrap}
+.comp-stats-cards{display:none}
+.stage-error{color:var(--loss);font-size:13px;font-weight:600;min-height:0}
+.picked-player .rating{margin-left:5px;vertical-align:middle}
+nav#tabs>button,.nav,.msheet button,.pki{font-weight:600}
+.sub{font-weight:500}
+@media(max-width:480px){.next-action{align-items:center;flex-direction:row;gap:8px;padding:12px}.next-action .btn{width:auto;flex:0 0 auto;padding:6px 10px;font-size:12px}.next-action b{font-size:20px}.stats-filters{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){.comp-stats-wide{display:none}.comp-stats-cards{display:grid;gap:8px}.comp-stat-card{min-width:0;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surf)}.comp-stat-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.comp-stat-head b{display:flex;align-items:center;gap:5px;text-align:right;font-weight:700}.comp-stat-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.comp-stat-metrics>div{display:flex;flex-direction:column;gap:2px;padding:6px;background:var(--bg);border-radius:7px}.comp-stat-metrics span,.comp-stat-result span{font-size:11px;color:var(--mute)}.comp-stat-metrics b,.comp-stat-result b{font-size:13px}.comp-stat-result{display:flex;justify-content:space-between;gap:8px;margin:8px 0 0;padding-top:7px;border-top:1px solid var(--line)}}
+.stats-extra{margin:10px 0;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surf)}.stats-extra>summary{font-weight:700;color:var(--acc);cursor:pointer}.comp-season-groups{display:grid;gap:8px}.comp-season-group{border:1px solid var(--line);border-radius:10px;background:var(--surf);overflow:hidden}.comp-season-group>summary{padding:10px 12px;font:700 18px 'Barlow Condensed',sans-serif;cursor:pointer;color:var(--ink)}.comp-season-group>.comp-stats-cards{display:grid;gap:8px;padding:0 8px 8px}.comp-stats-filter{max-width:360px;margin:8px 0}.comp-stats-filter select{width:100%}
+@media(max-width:560px){.comp-stats-wide{display:none}.comp-stats-cards{display:grid;gap:8px}.comp-stat-card{min-width:0;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surf)}.comp-stat-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.comp-stat-head b{display:flex;align-items:center;gap:5px;text-align:right;font-weight:700}.comp-stat-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.comp-stat-metrics>div{display:flex;flex-direction:column;gap:2px;padding:6px;background:var(--bg);border-radius:7px}.comp-stat-metrics span,.comp-stat-result span{font-size:11px;color:var(--mute)}.comp-stat-metrics b,.comp-stat-result b{font-size:13px}.comp-stat-result{display:flex;justify-content:space-between;gap:8px;margin:8px 0 0;padding-top:7px;border-top:1px solid var(--line)}.comp-stats-filter{max-width:none}.row{grid-template-columns:auto minmax(0,1fr) auto auto;gap:4px}}
 
 </style>
 </head>
@@ -421,7 +436,25 @@ document.getElementById('dl-comps').innerHTML=opt(COMPS);
 </script>
 
 <script>
+const APP_VERSION='1.4.1';
 const KEY='carreira-tecnico-v1';
+const LANG_MAP={
+ en:Object.fromEntries([['Resumo','Overview'],['Partidas','Matches'],['Elenco','Squad'],['Mercado','Transfers'],['Estatísticas','Statistics'],['Mais','More'],['Configurações','Settings'],['Aparência','Appearance'],['Tema (neste aparelho)','Theme (this device)'],['Automático','System'],['Claro','Light'],['Escuro','Dark'],['Cor de fundo no modo claro','Light mode background color'],['Escolha um tom suave para reduzir o brilho. A cor só se aplica no tema claro.','Choose a softer shade to reduce glare. This color only applies in light mode.'],['Idioma','Language'],['Português','Portuguese'],['Espanhol','Spanish'],['Inglês','English'],['Versão do app','App version'],['Próximo passo','Next step'],['PRÓXIMO PASSO','NEXT STEP'],['Prepare a temporada','Set up your season'],['Registre a primeira partida','Record your first match'],['Continue sua carreira','Continue your career'],['Monte seu elenco','Build your squad'],['Adicione um campeonato para começar a registrar os jogos.','Add a competition to start recording matches.'],['Escolha o campeonato, o adversário e informe o placar.','Choose the competition and opponent, then enter the score.'],['Registre a próxima partida e mantenha a temporada atualizada.','Record the next match to keep your season up to date.'],['Cadastre os jogadores para acompanhar o desempenho individual.','Add players to track individual performance.'],['Adicionar campeonato','Add competition'],['Registrar partida','Record match'],['Cadastrar jogadores','Add players'],['Central do elenco','Squad hub'],['Fechar temporada','Close season'],['Esta temporada','This season'],['Carreira toda','All-time career'],['Campeonatos','Competitions'],['Resultado (opcional)','Result (optional)'],['Adicionar','Add'],['Temporada','Season'],['Nova temporada','New season'],['Todas as temporadas','All seasons'],['Abrir temporada','Start season'],['Copiar elenco e campeonatos','Copy squad and competitions'],['Posição final no grupo','Final group position'],['Selecione','Select'],['1º lugar','1st place'],['2º lugar','2nd place'],['3º lugar','3rd place'],['4º lugar','4th place'],['Gols','Goals'],['Assistências','Assists'],['Amarelos','Yellow cards'],['Vermelho','Red card'],['Nota','Rating'],['Jogadores selecionados','Selected players'],['Editar dados','Edit details'],['Pesquisar jogador do elenco','Search squad players'],['Digite o nome do jogador...','Enter a player name...'],['Comece a digitar para encontrar um jogador.','Start typing to find a player.'],['Nenhum jogador selecionado.','No players selected.'],['Dados da atuação','Match performance'],['Salvar atuação','Save performance'],['Cancelar','Cancel'],['Buscar adversário','Search opponent'],['Competição','Competition'],['Mando','Venue'],['Todas','All'],['Todos','All'],['Casa','Home'],['Fora','Away'],['Neutro','Neutral'],['Backup dos dados','Data backup'],['Baixar backup (.json)','Download backup (.json)'],['Copiar backup','Copy backup'],['Restaurar backup colado','Restore pasted backup'],['Bases de dados e skins','Databases and skins'],['Clubes','Clubs'],['Competições','Competitions'],['Adicionar item à lista','Add item to list'],['Nome do item','Item name'],['Escolher imagem','Choose image'],['Trocar','Replace'],['Remover','Remove'],['Prêmios individuais','Individual awards'],['Sala de troféus','Trophy room'],['Artih','Top scorer'],['Aproveitamento','Win rate'],['Últimos jogos','Recent matches'],['Saldo de gols','Goal difference'],['Vitórias','Wins'],['Empates','Draws'],['Derrotas','Losses'],['Gols feitos','Goals scored'],['Gols sofridos','Goals conceded'],['Histórico geral','Career history'],['Posição','Position'],['Idade','Age'],['Overall','Overall'],['Jogos','Matches played'],['Adicionar jogador','Add player'],['Adicionar jogador','Add player'],['Salvar partida','Save match'],['Salvar e registrar outra','Save and record another'],['Editar partida','Edit match'],['Editar partida e atuações','Edit match and performances'],['Pênaltis do seu time','Your team penalties'],['Pênaltis do adversário','Opponent penalties'],['Rodada / fase','Round / stage'],['Observações da temporada','Season notes'],['Registrar transferência','Record transfer'],['Caixa atual','Current balance'],['Aparência','Appearance'],['Desfazer','Undo'],['Desfazer saída','Undo transfer'],['Voltar às cores padrão','Restore default colors'],['Resultado em','Result in'],['Digite e escolha','Type and choose'],['Classificação','Standings'],['Oitavas de final','Round of 16'],['Playoff','Playoff'],['Selecione','Select'],['Regra','Rule'],['Salvar','Save'],['Editar','Edit'],['Fechar','Close'],['Abrir','Open'],['Nenhum campeonato ainda. Adicione abaixo ou registre partidas.','No competitions yet. Add one below or record a match.'],['Elenco vazio nesta temporada. Adicione jogadores acima.','The squad is empty this season. Add players above.']]),
+ es:Object.fromEntries([['Resumo','Resumen'],['Partidas','Partidos'],['Elenco','Plantilla'],['Mercado','Mercado'],['Estatísticas','Estadísticas'],['Mais','Más'],['Configurações','Configuración'],['Aparência','Apariencia'],['Tema (neste aparelho)','Tema (este dispositivo)'],['Automático','Automático'],['Claro','Claro'],['Escuro','Oscuro'],['Cor de fundo no modo claro','Color de fondo del modo claro'],['Escolha um tom suave para reduzir o brilho. A cor só se aplica no tema claro.','Elige un tono suave para reducir el brillo. Solo se aplica en el tema claro.'],['Idioma','Idioma'],['Português','Portugués'],['Espanhol','Español'],['Inglês','Inglés'],['Versão do app','Versión de la aplicación'],['PRÓXIMO PASSO','SIGUIENTE PASO'],['Prepare a temporada','Prepara la temporada'],['Registre a primeira partida','Registra el primer partido'],['Continue sua carreira','Continúa tu carrera'],['Monte seu elenco','Forma tu plantilla'],['Adicione um campeonato para começar a registrar os jogos.','Añade una competición para empezar a registrar partidos.'],['Escolha o campeonato, o adversário e informe o placar.','Elige la competición y el rival, e introduce el marcador.'],['Registre a próxima partida e mantenha a temporada atualizada.','Registra el próximo partido y mantén la temporada al día.'],['Cadastre os jogadores para acompanhar o desempenho individual.','Añade jugadores para seguir su rendimiento individual.'],['Adicionar campeonato','Añadir competición'],['Registrar partida','Registrar partido'],['Cadastrar jogadores','Añadir jugadores'],['Central do elenco','Centro de la plantilla'],['Fechar temporada','Cerrar temporada'],['Esta temporada','Esta temporada'],['Carreira toda','Toda la carrera'],['Campeonatos','Competiciones'],['Resultado (opcional)','Resultado (opcional)'],['Adicionar','Añadir'],['Temporada','Temporada'],['Nova temporada','Nueva temporada'],['Todas as temporadas','Todas las temporadas'],['Abrir temporada','Abrir temporada'],['Copiar elenco e campeonatos','Copiar plantilla y competiciones'],['Posição final no grupo','Posición final en el grupo'],['Selecione','Selecciona'],['1º lugar','1.º puesto'],['2º lugar','2.º puesto'],['3º lugar','3.º puesto'],['4º lugar','4.º puesto'],['Gols','Goles'],['Assistências','Asistencias'],['Amarelos','Amarillas'],['Vermelho','Roja'],['Nota','Nota'],['Jogadores selecionados','Jugadores seleccionados'],['Editar dados','Editar datos'],['Pesquisar jogador do elenco','Buscar jugador de la plantilla'],['Digite o nome do jogador...','Escribe el nombre del jugador...'],['Comece a digitar para encontrar um jogador.','Empieza a escribir para buscar un jugador.'],['Nenhum jogador selecionado.','No hay jugadores seleccionados.'],['Dados da atuação','Datos del partido'],['Salvar atuação','Guardar actuación'],['Cancelar','Cancelar'],['Buscar adversário','Buscar rival'],['Competição','Competición'],['Mando','Localía'],['Todas','Todas'],['Todos','Todos'],['Casa','Local'],['Fora','Visitante'],['Neutro','Campo neutral'],['Backup dos dados','Copia de seguridad'],['Baixar backup (.json)','Descargar copia (.json)'],['Copiar backup','Copiar copia'],['Restaurar backup colado','Restaurar copia pegada'],['Bases de dados e skins','Bases de datos y apariencias'],['Clubes','Clubes'],['Competições','Competiciones'],['Adicionar item à lista','Añadir elemento a la lista'],['Nome do item','Nombre del elemento'],['Escolher imagem','Elegir imagen'],['Trocar','Cambiar'],['Remover','Eliminar'],['Prêmios individuais','Premios individuales'],['Sala de troféus','Sala de trofeos'],['Aproveitamento','Rendimiento'],['Últimos jogos','Últimos partidos'],['Saldo de gols','Diferencia de goles'],['Vitórias','Victorias'],['Empates','Empates'],['Derrotas','Derrotas'],['Gols feitos','Goles a favor'],['Gols sofridos','Goles en contra'],['Histórico geral','Historial general'],['Posição','Posición'],['Idade','Edad'],['Overall','Media'],['Jogos','Partidos'],['Adicionar jogador','Añadir jugador'],['Salvar partida','Guardar partido'],['Salvar e registrar outra','Guardar y registrar otro'],['Editar partida','Editar partido'],['Pênaltis do seu time','Penaltis de tu equipo'],['Pênaltis do adversário','Penaltis del rival'],['Rodada / fase','Jornada / fase'],['Observações da temporada','Notas de la temporada'],['Registrar transferência','Registrar traspaso'],['Caixa atual','Saldo actual'],['Voltar às cores padrão','Restaurar colores predeterminados'],['Digite e escolha','Escribe y selecciona'],['Oitavas de final','Octavos de final'],['Salvar','Guardar'],['Editar','Editar'],['Fechar','Cerrar'],['Abrir','Abrir'],['Nenhum campeonato ainda. Adicione abaixo ou registre partidas.','Aún no hay competiciones. Añade una abajo o registra partidos.'],['Elenco vazio nesta temporada. Adicione jogadores acima.','La plantilla está vacía esta temporada. Añade jugadores arriba.']])
+};
+Object.assign(LANG_MAP.en,Object.fromEntries([['1º lugar: avança diretamente às oitavas.','1st place: advances directly to the round of 16.'],['2º lugar: avança diretamente às oitavas.','2nd place: advances directly to the round of 16.'],['3º lugar: passa aos playoffs da Europa League.','3rd place: moves to the Europa League playoffs.'],['2º lugar: disputa os playoffs da Europa League.','2nd place: enters the Europa League playoffs.'],['3º lugar: passa aos playoffs da Conference League.','3rd place: moves to the Conference League playoffs.'],['2º lugar: disputa os playoffs da Conference League.','2nd place: enters the Conference League playoffs.'],['4º lugar: encerra a participação europeia.','4th place: European campaign ends.'],['3º lugar: encerra a participação europeia.','3rd place: European campaign ends.'],['Informe a posição no grupo para definir a próxima fase.','Enter your group position to determine the next stage.'],['Vindo em 3º da Champions: disputa os playoffs da Europa League.','3rd place in the Champions League: enters the Europa League playoffs.'],['Vindo em 3º da Europa League: disputa os playoffs da Conference League.','3rd place in the Europa League: enters the Conference League playoffs.'],['Já existe uma partida desta competição registrada nessa rodada/fase.','A match is already recorded for this competition and round/stage.'],['Essa competição já tem uma partida registrada nessa rodada/fase.','A match is already recorded for this competition and round/stage.'],['Todas as rodadas/fases disponíveis nesta competição já têm uma partida.','Every available round/stage in this competition already has a match.']]));
+Object.assign(LANG_MAP.es,Object.fromEntries([['1º lugar: avança diretamente às oitavas.','1.º puesto: pasa directamente a octavos.'],['2º lugar: avança diretamente às oitavas.','2.º puesto: pasa directamente a octavos.'],['3º lugar: passa aos playoffs da Europa League.','3.º puesto: pasa a la repesca de la Europa League.'],['2º lugar: disputa os playoffs da Europa League.','2.º puesto: juega la repesca de la Europa League.'],['3º lugar: passa aos playoffs da Conference League.','3.º puesto: pasa a la repesca de la Conference League.'],['2º lugar: disputa os playoffs da Conference League.','2.º puesto: juega la repesca de la Conference League.'],['4º lugar: encerra a participação europeia.','4.º puesto: termina su participación europea.'],['3º lugar: encerra a participação europeia.','3.º puesto: termina su participación europea.'],['Informe a posição no grupo para definir a próxima fase.','Indica la posición del grupo para definir la siguiente fase.'],['Vindo em 3º da Champions: disputa os playoffs da Europa League.','3.º en Champions: juega la repesca de la Europa League.'],['Vindo em 3º da Europa League: disputa os playoffs da Conference League.','3.º en Europa League: juega la repesca de la Conference League.'],['Já existe uma partida desta competição registrada nessa rodada/fase.','Ya hay un partido registrado en esta jornada/fase de la competición.'],['Essa competição já tem uma partida registrada nessa rodada/fase.','Esta competición ya tiene un partido registrado en esa jornada/fase.'],['Todas as rodadas/fases disponíveis nesta competição já têm uma partida.','Todas las jornadas/fases disponibles ya tienen un partido.']]));
+Object.assign(LANG_MAP.en,{'Participação nas competições por temporada':'Competition participation by season','Temporada de origem':'Source season','Importar jogadores da temporada anterior':'Import players from a previous season','Importar jogadores':'Import players','Nenhum jogador disponível para importar.':'No players available to import.','Resultado / colocação':'Result / finish','Sem participação registrada.':'No competition participation recorded.'});
+Object.assign(LANG_MAP.es,{'Participação nas competições por temporada':'Participación en competiciones por temporada','Temporada de origem':'Temporada de origen','Importar jogadores da temporada anterior':'Importar jugadores de una temporada anterior','Importar jogadores':'Importar jugadores','Nenhum jogador disponível para importar.':'No hay jugadores disponibles para importar.','Resultado / colocação':'Resultado / puesto','Sem participação registrada.':'No hay participación registrada.'});
+Object.assign(LANG_MAP.en,{'V-E-D':'W-D-L','Gols (pró–contra)':'Goals (for–against)','Filtrar adversários…':'Filter opponents…','Exibindo os 10 adversários com mais jogos nos filtros atuais. A busca localiza outros adversários desta seleção.':'Showing the 10 opponents with the most matches in the current filters. Search can find other opponents in this selection.','Buscar adversário no retrospecto':'Search opponent history','Posição final no grupo':'Final group position','Informe a posição no grupo para definir a próxima fase.':'Enter the group position to determine the next stage.','Vindo em 3º da Europa League: disputa os playoffs da Conference League.':'3rd place in the Europa League: enters the Conference League playoffs.','Já existe uma partida desta competição registrada nessa rodada/fase.':'A match is already recorded for this competition and round/stage.','Todas as rodadas/fases disponíveis nesta competição já têm uma partida.':'Every available round/stage in this competition already has a match.','Filtrar por temporada':'Filter by season','Histórico':'History','Estatísticas':'Statistics','Troféus e prêmios':'Trophies and awards'});
+Object.assign(LANG_MAP.es,{'V-E-D':'V-E-D','Gols (pró–contra)':'Goles (a favor–en contra)','Filtrar adversários…':'Filtrar rivales…','Exibindo os 10 adversários com mais jogos nos filtros atuais. A busca localiza outros adversários desta seleção.':'Se muestran los 10 rivales con más partidos en los filtros actuales. La búsqueda encuentra otros rivales de esta selección.','Buscar adversário no retrospecto':'Buscar rival en el historial','Posição final no grupo':'Posición final en el grupo','Informe a posição no grupo para definir a próxima fase.':'Indica la posición del grupo para definir la siguiente fase.','Vindo em 3º da Europa League: disputa os playoffs da Conference League.':'3.º en Europa League: juega la repesca de la Conference League.','Já existe uma partida desta competição registrada nessa rodada/fase.':'Ya hay un partido registrado en esta jornada/fase de la competición.','Todas as rodadas/fases disponíveis nesta competição já têm uma partida.':'Todas las jornadas/fases disponibles ya tienen un partido.','Filtrar por temporada':'Filtrar por temporada','Histórico':'Historial','Estatísticas':'Estadísticas','Troféus e prêmios':'Trofeos y premios'});
+Object.assign(LANG_MAP.en,{'Temporadas':'Seasons'});Object.assign(LANG_MAP.es,{'Temporadas':'Temporadas'});
+for(let n=1;n<=4;n++){LANG_MAP.en[`${n}º lugar no grupo`]=`${n}${n===1?'st':n===2?'nd':n===3?'rd':'th'} place in group`;LANG_MAP.es[`${n}º lugar no grupo`]=`${n}.º puesto en el grupo`}
+function appLanguage(){try{return localStorage.getItem('idioma')||'pt'}catch(e){return 'pt'}}
+function setLanguage(lang){try{localStorage.setItem('idioma',lang)}catch(e){}render()}
+Object.assign(LANG_MAP.en,{'Idioma e versão':'Language and version','Aproveitamento na carreira':'Career win rate','Buscar clube ou competição':'Search clubs or competitions','Vendido':'Sold','Cedido por empréstimo':'Loaned out','Observações':'Notes','Classificação final':'Final standings','Informe a posição final no grupo no Resumo para liberar a próxima fase.':'Enter your final group position on Overview to unlock the next stage.','A Champions terminou. Como 3º colocado, o próximo jogo será nos playoffs da Europa League.':'The Champions League campaign is over. As a 3rd-place finisher, your next match is in the Europa League playoffs.','A Europa League terminou. Como 3º colocado, o próximo jogo será nos playoffs da Conference League.':'The Europa League campaign is over. As a 3rd-place finisher, your next match is in the Conference League playoffs.','A participação nesta competição foi encerrada.':'Your campaign in this competition has ended.'});Object.assign(LANG_MAP.es,{'Idioma e versão':'Idioma y versión','Aproveitamento na carreira':'Rendimiento de la carrera','Buscar clube ou competição':'Buscar clubes o competiciones','Vendido':'Vendido','Cedido por empréstimo':'Cedido en préstamo','Observações':'Notas','Classificação final':'Clasificación final','Informe a posição final no grupo no Resumo para liberar a próxima fase.':'Indica tu puesto final en el grupo en Resumen para desbloquear la siguiente fase.','A Champions terminou. Como 3º colocado, o próximo jogo será nos playoffs da Europa League.':'Terminó la Champions. Como 3.º, el próximo partido será en la repesca de la Europa League.','A Europa League terminou. Como 3º colocado, o próximo jogo será nos playoffs da Conference League.':'Terminó la Europa League. Como 3.º, el próximo partido será en la repesca de la Conference League.','A participação nesta competição foi encerrada.':'Tu participación en esta competición ha terminado.'});
+function translatedPhrase(value,lang,map){const key=value.trim();if(map[key])return map[key];const prefixRules=lang==='en'?[['Partidas de ','Matches · '],['Elenco de ','Squad · '],['Transferências de ','Transfers · '],['Números de ','Season stats · '],['Estatísticas de ','Statistics · '],['Versão do app: ','App version: '],['Aproveitamento na carreira','Career win rate']]:[['Partidas de ','Partidos · '],['Elenco de ','Plantilla · '],['Transferências de ','Traspasos · '],['Números de ','Estadísticas de '],['Estatísticas de ','Estadísticas · '],['Versão do app: ','Versión de la aplicación: '],['Aproveitamento na carreira','Rendimiento de la carrera']];for(const [a,b] of prefixRules)if(key.startsWith(a))return b+key.slice(a.length);return null}
+function translateUi(){const lang=appLanguage(),map=LANG_MAP[lang];document.documentElement.lang=lang==='pt'?'pt-BR':lang;if(!map)return;const roots=[document.getElementById('top'),document.getElementById('tabs'),document.getElementById('app')].filter(Boolean),w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode())){if(!roots.some(r=>r.contains(n)))continue;const key=n.nodeValue.trim(),translated=translatedPhrase(key,lang,map);if(translated)n.nodeValue=n.nodeValue.replace(key,translated)}for(const el of document.querySelectorAll('#top [placeholder],#tabs [placeholder],#app [placeholder],#top [aria-label],#tabs [aria-label],#app [aria-label],#top [title],#tabs [title],#app [title]'))for(const a of ['placeholder','aria-label','title']){const v=el.getAttribute(a),translated=v&&translatedPhrase(v,lang,map);if(translated)el.setAttribute(a,translated)}document.title=lang==='en'?'Football Manager Diary':lang==='es'?'Diario del Técnico':'Diário do Técnico'}
 const ns=()=>({m:[],p:[],t:[],res:[],aw:[],obs:''});
 function fresh(club){return{club,budget:50,cur:'2021/22',order:['2021/22'],data:{'2021/22':ns()}}}
 let S=fresh('Meu clube');
@@ -519,15 +552,47 @@ cp('UEFA Champions League','Fase de liga: 36 times, 8 jogos. 1º–8º vão dire
 cp('UEFA Europa League','Fase de liga: 36 times, 8 jogos. 1º–8º vão direto às oitavas; 9º–24º disputam playoff. Mata-mata ida e volta e final única',[...G(8,'Fase de liga'),...KOU]);
 cp('UEFA Conference League','Fase de liga: 36 times, 6 jogos. 1º–8º vão direto às oitavas; 9º–24º disputam playoff. Mata-mata ida e volta e final única',[...G(6,'Fase de liga'),...KOU]);
 const KOA=[...T('Oitavas de final'),...T('Quartas de final'),...T('Semifinal'),'Final'];
-cp('UEFA Champions League (formato antigo)','Até 2023/24: 8 grupos de 4 (6 jogos), 1º e 2º avançam; mata-mata ida e volta e final única',[...G(6,'Fase de grupos'),...KOA]);
-cp('UEFA Europa League (formato antigo)','Até 2023/24: 8 grupos de 4 (6 jogos); 1º vai às oitavas e 2º disputa playoff com os terceiros da Champions; mata-mata ida e volta e final única',[...G(6,'Fase de grupos'),...T('Playoff'),...KOA]);
-cp('UEFA Conference League (formato antigo)','2021/22 a 2023/24: 8 grupos de 4 (6 jogos); 1º vai às oitavas e 2º disputa playoff com os terceiros da Europa League; mata-mata ida e volta e final única',[...G(6,'Fase de grupos'),...T('Playoff'),...KOA]);
+cp('UEFA Champions League (formato antigo)','Até 2023/24: 8 grupos de 4 (6 jogos); 1º e 2º avançam diretamente às oitavas, sem playoff próprio; 3º vai aos playoffs da Europa League',[...G(6,'Fase de grupos'),...KOA]);
+cp('UEFA Europa League (formato antigo)','Até 2023/24: 8 grupos de 4 (6 jogos); 1º vai direto às oitavas, 2º disputa o playoff da Europa League e 3º vai ao playoff da Conference League',[...G(6,'Fase de grupos'),...T('Playoff'),...KOA]);
+cp('UEFA Conference League (formato antigo)','2021/22 a 2023/24: 8 grupos de 4 (6 jogos); 1º vai direto às oitavas e 2º disputa o playoff da Conference League',[...G(6,'Fase de grupos'),...T('Playoff'),...KOA]);
+const OLD_CL='UEFA Champions League (formato antigo)',OLD_EL='UEFA Europa League (formato antigo)',OLD_CONF='UEFA Conference League (formato antigo)';
+const OLD_EURO=new Set([OLD_CL,OLD_EL,OLD_CONF]);
+function oldEuroRecord(c,d=D()){return d.res.find(r=>r.c===c)||null}
+function setGroupPlace(c,value){
+  const d=D();let r=d.res.find(x=>x.c===c);if(!r){r={c,r:''};d.res.push(r)}
+  r.groupPlace=value?+value:null;
+  const lower=c===OLD_CL?OLD_EL:c===OLD_EL?OLD_CONF:'';
+  if(lower){
+    const dep=d.res.find(x=>x.c===lower);
+    if(dep&&dep.inheritedFrom===c)delete dep.inheritedFrom;
+    if(+value===3){const next=dep||{c:lower,r:''};next.inheritedFrom=c;next.groupPlace=null;if(!dep)d.res.push(next)}
+  }
+  save();render();
+}
+function oldEuroRoute(c,place,inheritedFrom){
+  const p=+place;
+  if(c===OLD_CL)return p===1?'1º lugar: avança diretamente às oitavas.':p===2?'2º lugar: avança diretamente às oitavas.':p===3?'3º lugar: passa aos playoffs da Europa League.':p===4?'4º lugar: encerra a participação europeia.':'Informe a posição no grupo para definir a próxima fase.';
+  if(c===OLD_EL)return p===1?'1º lugar: avança diretamente às oitavas.':p===2?'2º lugar: disputa os playoffs da Europa League.':p===3?'3º lugar: passa aos playoffs da Conference League.':p===4?'4º lugar: encerra a participação europeia.':inheritedFrom===OLD_CL?'Vindo em 3º da Champions: disputa os playoffs da Europa League.':'Informe a posição no grupo para definir a próxima fase.';
+  return p===1?'1º lugar: avança diretamente às oitavas.':p===2?'2º lugar: disputa os playoffs da Conference League.':p===3?'3º lugar: encerra a participação europeia.':p===4?'4º lugar: encerra a participação europeia.':inheritedFrom===OLD_EL?'Vindo em 3º da Europa League: disputa os playoffs da Conference League.':'Informe a posição no grupo para definir a próxima fase.';
+}
+function stagesFor(c,all){
+  if(!OLD_EURO.has(c))return all;
+  const r=oldEuroRecord(c),p=+(r&&r.groupPlace),groups=all.filter(x=>x.startsWith('Fase de grupos')),playoffs=all.filter(x=>x.startsWith('Playoff')),knockout=all.filter(x=>/^(Oitavas|Quartas|Semifinal|Final)/.test(x));
+  const inherited=!!(r&&r.inheritedFrom);
+  if(inherited)return [...playoffs,...knockout];
+  if(c===OLD_CL)return p===1||p===2?[...groups,...knockout]:groups;
+  const canPlayoff=p===2||inherited;
+  const canAdvance=p===1||p===2||inherited;
+  return [...groups,...(canPlayoff?playoffs:[]),...(canAdvance?knockout:[])];
+}
 cp('Copa Libertadores','3 fases preliminares (ida e volta), 8 grupos de 4 (6 jogos), mata-mata ida e volta até a semifinal e final única',[...T('Fase preliminar 1'),...T('Fase preliminar 2'),...T('Fase preliminar 3'),...G(6,'Fase de grupos'),...T('Oitavas de final'),...T('Quartas de final'),...T('Semifinal'),'Final']);
 cp('Copa Sul-Americana','1ª fase em jogo único, 8 grupos de 4 (6 jogos), playoff com os 3º da Libertadores, mata-mata ida e volta e final única',['1ª fase',...G(6,'Fase de grupos'),...T('Playoff'),...T('Oitavas de final'),...T('Quartas de final'),...T('Semifinal'),'Final']);
 cp('Recopa Sul-Americana','Final em ida e volta',T('Final'));
 cp('Mundial de Clubes da FIFA','Formato 2025: grupos com 3 jogos e mata-mata em jogo único',[...G(3,'Fase de grupos'),...KO]);
 cp('Copa Intercontinental','Torneio curto; ajuste conforme o jogo',['Playoff inicial','Semifinal','Final']);
-cp('Amistoso','Jogo sem fase',['Amistoso']);cp('Amistoso de pré-temporada','Jogo sem fase',['Amistoso']);
+const FRIENDLY_STAGES=Array.from({length:30},(_,i)=>'Amistoso '+(i+1));
+cp('Amistoso','Jogos amistosos numerados para permitir mais de uma partida sem repetir a fase',FRIENDLY_STAGES);
+cp('Amistoso de pré-temporada','Jogos amistosos numerados para permitir mais de uma partida sem repetir a fase',FRIENDLY_STAGES.map((_,i)=>'Pré-temporada – amistoso '+(i+1)));
 cp('Copa do Mundo','48 seleções: grupos com 3 jogos e mata-mata a partir dos 16-avos',[...G(3,'Fase de grupos'),'16-avos de final',...KO.slice(0,2),'Semifinal','Disputa do 3º lugar','Final']);
 cp('Eurocopa','Grupos com 3 jogos e mata-mata',[...G(3,'Fase de grupos'),...KO]);
 ['Copa América','Copa Africana de Nações','Copa da Ásia'].forEach(n=>cp(n,'Grupos com 3 jogos e mata-mata',[...G(3,'Fase de grupos'),...KO.slice(n==='Copa América'?1:0,3),'Disputa do 3º lugar','Final']));
@@ -567,23 +632,28 @@ function updStage(){
   S.stageChoice=S.stageChoice||{};
   const preferred=S.stageChoice[c]||cur;
   const done=new Set(D().m.filter(m=>m.c===c).map(m=>m.ph));
-  const st=d?d[1]:(c?['Jogo único']:['']);
-  sel.innerHTML=st.map(s=>`<option value="${esc(s)}">${esc(s)||'Escolha a competição'}${s&&done.has(s)?' ✓':''}</option>`).join('');
+  const st=stagesFor(c,d?d[1]:(c?['Jogo único']:['']));
+  sel.innerHTML=st.map(s=>`<option value="${esc(s)}" ${done.has(s)?'disabled':''}>${esc(s)||'Escolha a competição'}${s&&done.has(s)?' ✓':''}</option>`).join('');
   const nd=st.find(s=>!done.has(s));
-  sel.value=st.includes(preferred)&&preferred?preferred:(nd!==undefined?nd:st[0]);
+  sel.value=nd!==undefined?nd:(st.includes(preferred)&&preferred?preferred:(st[0]||''));
   if(!S.stageChoice[c]&&sel.value)S.stageChoice[c]=sel.value;
   let rt=d?'Regra: '+d[0]+'. ✓ marca o que já foi registrado.':(c?'Competição fora da lista: jogo único.':'');
   if(/^UEFA (Champions|Europa|Conference) League$/.test(c)&&parseInt(S.cur)<2024)rt+=' Dica: até 2023/24 o formato tinha fase de grupos. Escolha "'+c+' (formato antigo)".';
-  document.getElementById('rl').textContent=rt;
+  if(OLD_EURO.has(c)){const r=oldEuroRecord(c);rt+=' '+oldEuroRoute(c,r?.groupPlace,r?.inheritedFrom)}
+  const info=document.getElementById('rl');if(info)info.textContent=rt;
+  let exhausted='Todas as rodadas/fases disponíveis nesta competição já têm uma partida.';
+  if(OLD_EURO.has(c)&&nd===undefined){const er=oldEuroRecord(c),p=+(er&&er.groupPlace),groupCount=st.filter(x=>x.startsWith('Fase de grupos')).length;if(!p&&!er?.inheritedFrom&&done.size>=groupCount)exhausted='Informe a posição final no grupo no Resumo para liberar a próxima fase.';else if(c===OLD_CL&&p===3)exhausted='A Champions terminou. Como 3º colocado, o próximo jogo será nos playoffs da Europa League.';else if(c===OLD_EL&&p===3)exhausted='A Europa League terminou. Como 3º colocado, o próximo jogo será nos playoffs da Conference League.';else if(((c===OLD_CL||c===OLD_EL||c===OLD_CONF)&&p>=4)||(c===OLD_CONF&&p===3))exhausted='A participação nesta competição foi encerrada.'}
+  const err=document.getElementById('stageErr');if(err)err.textContent=nd===undefined?exhausted:'';
+  const submit=f.querySelector('button[type="submit"]');if(submit)submit.disabled=nd===undefined;
 }
 
-const selectedLineup=c=>{const L=LX(c),P=D().p.filter(p=>L[p.k]).sort((a,b)=>a.n.localeCompare(b.n,'pt-BR'));return P.length?P.map(p=>{const x=L[p.k];return `<div class="picked-player"><div><b>${esc(p.n)}</b><div class="sub">${posBadge(p.pos)} · ${x.g||0} gols · ${x.a||0} assistências</div></div><button type="button" class="sm" onclick="openPlayerStats('${c}',${p.k})">Editar dados</button><button type="button" class="x" aria-label="Remover ${esc(p.n)}" onclick="removeMatchPlayer('${c}',${p.k})">✕</button></div>`}).join(''):'<p class="sub">Nenhum jogador selecionado.</p>'};
-const lineupBox=c=>`<div class="player-picker"><label for="player-search-${c}">Pesquisar jogador do elenco</label><input id="player-search-${c}" type="search" placeholder="Digite o nome do jogador..." autocomplete="off" oninput="searchMatchPlayers('${c}',this.value)"><div id="player-results-${c}" class="player-results"><p class="sub">Comece a digitar para encontrar um jogador.</p></div><div class="picked-list"><h3>Jogadores selecionados</h3><div id="picked-${c}">${selectedLineup(c)}</div></div><div class="qb"><button type="button" class="sm" onclick="quick('${c}','last')">Repetir time do último jogo</button><button type="button" class="sm" onclick="quick('${c}','all')">Selecionar todos</button><button type="button" class="sm" onclick="quick('${c}','none')">Limpar seleção</button></div></div>`;
+const selectedLineup=c=>{const L=LX(c),P=D().p.filter(p=>L[p.k]).sort((a,b)=>a.n.localeCompare(b.n,'pt-BR'));return P.length?P.map(p=>{const x=L[p.k],rating=x.n===''||x.n==null?'—':(+x.n).toFixed(1);return `<div class="picked-player"><div><b>${esc(p.n)}</b><div class="sub">${posBadge(p.pos)} · ${x.g||0} gols · ${x.a||0} assistências · Nota <span class="rating ${ratingClass(x.n)}">${rating}</span></div></div><button type="button" class="sm" onclick="openPlayerStats('${c}',${p.k})">Editar dados</button><button type="button" class="x" aria-label="Remover ${esc(p.n)}" onclick="removeMatchPlayer('${c}',${p.k})">✕</button></div>`}).join(''):'<p class="sub">Nenhum jogador selecionado.</p>'};
+const lineupBox=c=>`<div class="player-picker"><label for="player-search-${c}">Pesquisar jogador do elenco</label><input id="player-search-${c}" type="search" placeholder="Digite o nome do jogador..." autocomplete="off" oninput="searchMatchPlayers('${c}',this.value)"><div id="player-results-${c}" class="player-results"><p class="sub">Comece a digitar para encontrar um jogador.</p></div><div class="picked-list"><h3>Jogadores selecionados</h3><div id="picked-${c}">${selectedLineup(c)}</div></div></div>`;
 function searchMatchPlayers(c,q){const box=document.getElementById('player-results-'+c);if(!box)return;const term=norm(q.trim());if(!term){box.innerHTML='<p class="sub">Comece a digitar para encontrar um jogador.</p>';return}const L=LX(c),players=D().p.filter(p=>!p.out||L[p.k]).filter(p=>norm(p.n).includes(term)).sort((a,b)=>a.n.localeCompare(b.n,'pt-BR'));box.innerHTML=players.length?players.map(p=>`<button type="button" class="player-result" onclick="openPlayerStats('${c}',${p.k})"><span>${esc(p.n)}<small>${posBadge(p.pos)} ${esc(p.pos||'')}</small></span><b>${L[p.k]?'Editar':'Selecionar'} ›</b></button>`).join(''):'<p class="sub">Nenhum jogador encontrado no elenco.</p>'}
 function openPlayerStats(c,k){const p=D().p.find(x=>String(x.k)===String(k));if(!p)return;const x=LX(c)[k]||{g:0,a:0,y:0,r:0,n:''};let modal=document.getElementById('player-stats-modal');if(!modal){modal=document.createElement('div');modal.id='player-stats-modal';modal.className='player-modal';document.body.appendChild(modal)}modal.innerHTML=`<div class="player-modal-backdrop" onclick="closePlayerStats()"></div><section class="player-modal-card" role="dialog" aria-modal="true" aria-label="Dados da atuação"><div class="player-modal-head"><div><span class="sub">Dados da atuação</span><h2>${esc(p.n)}</h2></div><button type="button" class="x" onclick="closePlayerStats()" aria-label="Fechar">✕</button></div><form onsubmit="return savePlayerStats('${c}',${k},this)"><div class="player-stat-grid"><label>Gols<input name="g" type="number" min="0" value="${x.g||0}" required></label><label>Assistências<input name="a" type="number" min="0" value="${x.a||0}" required></label><label>Cartões amarelos<input name="y" type="number" min="0" max="2" value="${x.y||0}" required></label><label>Cartões vermelhos<input name="r" type="number" min="0" max="1" value="${x.r||0}" required></label><label class="rating-field">Nota<input name="n" type="number" min="0" max="10" step="0.1" value="${x.n??''}" placeholder="0 a 10"></label></div><div class="player-modal-actions"><button type="button" class="sm" onclick="closePlayerStats()">Cancelar</button><button class="btn">Salvar atuação</button></div></form></section>`;modal.classList.add('show');const first=modal.querySelector('input');if(first)first.focus()}
 function closePlayerStats(){const m=document.getElementById('player-stats-modal');if(m)m.classList.remove('show')}
 function savePlayerStats(c,k,f){const o=Object.fromEntries(new FormData(f));LX(c)[k]={g:Math.max(0,+o.g||0),a:Math.max(0,+o.a||0),y:Math.min(2,Math.max(0,+o.y||0)),r:Math.min(1,Math.max(0,+o.r||0)),n:o.n===''?'':Math.min(10,Math.max(0,+o.n))};if(c!=='n')save();closePlayerStats();refreshPicked(c);return false}
-function refreshPicked(c){const box=document.getElementById('picked-'+c);if(box)box.innerHTML=selectedLineup(c);const q=document.getElementById('player-search-'+c);if(q)searchMatchPlayers(c,q.value)}
+function refreshPicked(c){const box=document.getElementById('picked-'+c);if(box)box.innerHTML=selectedLineup(c);const q=document.getElementById('player-search-'+c);if(q){q.value='';searchMatchPlayers(c,'')}}
 function removeMatchPlayer(c,k){delete LX(c)[k];if(c!=='n')save();refreshPicked(c)}
 function quick(c,mode){
   const L=LX(c),P=D().p.filter(p=>!p.out),z=()=>({g:0,a:0,y:0,r:0,n:''});
@@ -598,9 +668,10 @@ function quick(c,mode){
   const lu=document.getElementById('lu-'+c);if(lu)lu.innerHTML=lineupBox(c);
   if(c!=='n')save();
 }
-function pm(i,f,v){D().m[i][f]=v;fixLoc(D().m[i]);openM=i;save();render()}
+function hasDuplicateMatch(comp,phase,except=-1){return D().m.some((m,i)=>i!==except&&norm(m.c)===norm(comp)&&norm(m.ph)===norm(phase))}
+function pm(i,f,v){if(f==='ph'&&hasDuplicateMatch(D().m[i].c,v,i)){bkm='Já existe uma partida desta competição registrada nessa rodada/fase.';openM=i;render();return}D().m[i][f]=v;fixLoc(D().m[i]);openM=i;save();render()}
 function pmc(i,v){
-  const m=D().m[i];m.c=v.trim();
+  const m=D().m[i];if(hasDuplicateMatch(v,m.ph,i)){bkm='Essa competição já tem uma partida registrada nessa rodada/fase.';openM=i;render();return}m.c=v.trim();
   const st=RULES[m.c]?RULES[m.c][1]:['Jogo único'];
   if(!m.c)m.ph='';else if(!st.includes(m.ph))m.ph=st[0];
   fixLoc(m);
@@ -734,7 +805,8 @@ function downloadBk(){
 }
 function restoreFile(file){if(!file)return;const rd=new FileReader();rd.onerror=()=>{bkm='Não foi possível ler o arquivo de backup.';render()};rd.onload=()=>restoreText(String(rd.result||''));rd.readAsText(file)}
 function restoreText(text){const box=document.getElementById('bk');if(box)box.value=text;restore()}
-function vConfig(){return `<h2>Configurações</h2>${appearBox()}${assetLibraryBox()}${matchBox()}${cloudBox()}${careersBox()}${backupBox()}`}
+function languageBox(){const lang=appLanguage();return `<details class="bkd"><summary>Idioma e versão</summary><label>Idioma da interface<select onchange="setLanguage(this.value)"><option value="pt" ${lang==='pt'?'selected':''}>Português</option><option value="es" ${lang==='es'?'selected':''}>Español</option><option value="en" ${lang==='en'?'selected':''}>English</option></select></label><p class="sub">Versão do app: <b>${APP_VERSION}</b></p></details>`}
+function vConfig(){return `<h2>Configurações</h2>${languageBox()}${appearBox()}${assetLibraryBox()}${matchBox()}${cloudBox()}${careersBox()}${backupBox()}`}
 function assetClubNames(){
  const names=new Set([...Object.keys(CLUB_BADGES),...(CLUB_DB.clubs||[]),...(S.assetClubs||[]),String(S.nome||S.club||'').trim()].filter(Boolean));
  S.order.forEach(se=>S.data[se].m.forEach(m=>{if(m.adv)names.add(String(m.adv).trim())}));
@@ -810,6 +882,8 @@ function vRank(){
   const rankSeason=S.order.includes(statSeason)?statSeason:S.cur,statData=S.data[rankSeason]||D();
   const compOpts=[...new Set(statSeasons.flatMap(s=>[...S.data[s].m.map(m=>m.c),...S.data[s].res.map(r=>r.c)]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
   const statComp=compOpts.includes(sub.statComp)?sub.statComp:'',statVenue=['Casa','Fora','Neutro'].includes(sub.statVenue)?sub.statVenue:'';
+  const compSeason=S.order.includes(sub.compSeason)?sub.compSeason:'all',compSeasonList=compSeason==='all'?[...S.order].reverse():[compSeason];
+  const compRows=compSeasonList.flatMap(s=>{const d=S.data[s],names=[...new Set([...d.res.map(x=>x.c),...d.m.map(x=>x.c)].filter(Boolean))];return names.map(c=>{const ms=d.m.filter(m=>m.c===c),q=recM({m:ms}),r=d.res.find(x=>x.c===c);return{s,c,j:ms.length,v:q.v,e:q.e,l:q.l,gp:q.gp,gc:q.gc,result:r?.r||(r?.groupPlace?`${r.groupPlace}º lugar no grupo`:'')}})});
   const matches=statSeasons.flatMap(s=>S.data[s].m).filter(m=>(!statComp||m.c===statComp)&&(!statVenue||m.loc===statVenue));
   const playerMap={};statSeasons.forEach(s=>S.data[s].p.forEach(p=>{const st=stats(p,S.data[s]),a=playerMap[p.k]||{p,s:{j:0,g:0,a:0,y:0,r:0,ns:0,nw:0}};a.p=p;['j','g','a','y','r'].forEach(k=>a.s[k]+=st[k]);if(st.n!=null){const w=Math.max(st.j,1);a.s.ns+=st.n*w;a.s.nw+=w}playerMap[p.k]=a}));
   const P=Object.values(playerMap).map(({p,s})=>{const n=s.nw?s.ns/s.nw:null;return{p,s:{j:s.j,g:s.g,a:s.a,y:s.y,r:s.r,n,nt:n==null?'–':n.toFixed(1)}}});
@@ -835,7 +909,9 @@ function vRank(){
   const H={};
   S.order.forEach(s=>S.data[s].p.forEach(p=>{const h=H[p.k]=H[p.k]||{k:p.k,n:p.n,c:0,ov:0};h.n=p.n;h.c++;h.ov=Math.max(h.ov,p.ov||0)}));
   const pl=Object.values(H).sort((a,b)=>b.c-a.c||b.ov-a.ov);
-  return `<h2>${statSeason==='all'?'Estatísticas da carreira':'Estatísticas de '+esc(statSeason)}</h2>${filters}
+  const seasonGroups=[...new Set(compRows.map(x=>x.s))].map(s=>{const items=compRows.filter(x=>x.s===s);return `<details class="comp-season-group" ${s===S.cur||s===compSeason?'open':''}><summary>${esc(s)}</summary><div class="comp-stats-cards">${items.map(x=>`<article class="comp-stat-card"><div class="comp-stat-head"><b>${trophy(x.c,20)} ${esc(x.c)}</b></div><div class="comp-stat-metrics"><div><span>Jogos</span><b>${x.j}</b></div><div><span>V-E-D</span><b>${x.v}-${x.e}-${x.l}</b></div><div><span>Gols</span><b>${x.gp}–${x.gc}</b></div></div><p class="comp-stat-result"><span>Resultado / colocação</span><b>${esc(x.result||'–')}</b></p></article>`).join('')}</div></details>`}).join('');
+  const competitionStats=`<details class="stats-extra" open><summary>Participação nas competições por temporada</summary><label class="comp-stats-filter">Filtrar por temporada<select onchange="setStatsFilter('compSeason',this.value)"><option value="all" ${compSeason==='all'?'selected':''}>Todas as temporadas</option>${[...S.order].reverse().map(s=>`<option value="${esc(s)}" ${compSeason===s?'selected':''}>${esc(s)}</option>`).join('')}</select></label>${seasonGroups||'<p class="sub">Sem participação registrada.</p>'}</details>`;
+  return `<h2>${statSeason==='all'?'Estatísticas da carreira':'Estatísticas de '+esc(statSeason)}</h2>${filters}${competitionStats}
   ${cr?`<p>🌟 <b>Craque da temporada:</b> ${esc(cr.p.n)} · nota ${cr.s.nt} · ${cr.s.g} gols · ${cr.s.a} assistências</p>`:'<p class="sub">O craque da temporada aparece quando um jogador tiver nota registrada em pelo menos 3 jogos.</p>'}
   <div class="rk"><div><h3>Artilheiros</h3>${lst(by('g'),s=>s.g)}</div><div><h3>Assistências</h3>${lst(by('a'),s=>s.a)}</div><div><h3>Melhor nota (3+ jogos)</h3>${lst(rated,s=>s.nt)}</div><div><h3>Mais jogos</h3>${lst(by('j'),s=>s.j)}</div><div><h3>Participações em gol</h3>${lst(pgl,s=>s.g+s.a)}</div><div><h3>G+A por jogo (3+ jogos)</h3>${lst(pgj,s=>fm2(s.j?(s.g+s.a)/s.j:0))}</div></div>
   <h2>Gráficos</h2>
@@ -847,7 +923,7 @@ function vRank(){
   ${rl.length?`<label class="ret-search">Buscar adversário<input type="search" placeholder="Filtrar adversários…" oninput="filterOpponentRows(this.value)" aria-label="Buscar adversário no retrospecto"></label><div class="scroll"><table id="ret-table"><thead><tr><th>Adversário</th><th>J</th><th>V</th><th>E</th><th>D</th><th>Gols</th></tr></thead><tbody>${rl.map((r,i)=>`<tr data-opponent="${esc(norm(r.n))}"${i>=10?' hidden':''}><td>${esc(r.n)}</td><td>${r.j}</td><td>${r.v}</td><td>${r.e}</td><td>${r.d}</td><td>${r.gp}–${r.gc}</td></tr>`).join('')}</tbody></table></div><p class="sub">Exibindo os 10 adversários com mais jogos nos filtros atuais. A busca localiza outros adversários desta seleção.</p>`:'<p class="sub">Sem partidas para os filtros selecionados.</p>'}`;
 }
 
-function setStatsFilter(k,v){sub[k]=v;if(k==='statSeason')sub.statComp='';render()}
+function setStatsFilter(k,v){sub[k]=v;if(k==='statSeason')sub.statComp='';if(k==='compSeason'&&v!=='all')statsDetailOpenRequest='comp-season:'+v;render()}
 
 function filterOpponentRows(q){
   const query=norm(q),rows=[...document.querySelectorAll('#ret-table tbody tr')];let shown=0;
@@ -897,11 +973,10 @@ function vHome(){
   const names=[...new Set([...d.m.map(x=>x.c).filter(Boolean),...d.res.map(x=>x.c)])];
   const cc=names.map(c=>{
     const ms=d.m.filter(x=>x.c===c),q=recM({m:ms}),x=d.res.find(y=>y.c===c);
-    return `<div class="cc" data-cc="${esc(c)}"><div class="cn">${esc(c)}</div><div class="cs">${ms.length} jogos · ${q.v}V ${q.e}E ${q.l}D · ${q.gp}:${q.gc} gols</div><div class="cr"><input list="dl-res" data-c="${esc(c)}" value="${esc(x?x.r:'')}" placeholder="Resultado (campeão, 3º lugar…)" aria-label="Resultado em ${esc(c)}" onchange="setResC(this.dataset.c,this.value)">${x?`<button class="x" aria-label="Remover ${esc(c)}" data-c="${esc(c)}" onclick="delRes(this.dataset.c)">✕</button>`:''}</div></div>`;
+    const place=OLD_EURO.has(c)?x?.inheritedFrom?`<p class="group-route" data-route="${esc(c)}">${oldEuroRoute(c,x?.groupPlace,x?.inheritedFrom)}</p>`:`<label class="group-place">Posição final no grupo<select data-c="${esc(c)}" onchange="setGroupPlace(this.dataset.c,this.value)"><option value="">Selecione</option>${[1,2,3,4].map(n=>`<option value="${n}" ${+x?.groupPlace===n?'selected':''}>${n}º lugar</option>`).join('')}</select></label><p class="group-route" data-route="${esc(c)}">${oldEuroRoute(c,x?.groupPlace,x?.inheritedFrom)}</p>`:'';
+    return `<div class="cc" data-cc="${esc(c)}"><div class="cn">${trophy(c,26)} ${esc(c)}</div><div class="cs">${ms.length} jogos · ${q.v}V ${q.e}E ${q.l}D · ${q.gp}:${q.gc} gols</div><div class="cr"><input list="dl-res" data-c="${esc(c)}" value="${esc(x?x.r:'')}" placeholder="Resultado (campeão, 3º lugar…)" aria-label="Resultado em ${esc(c)}" onchange="setResC(this.dataset.c,this.value)">${x?`<button class="x" aria-label="Remover ${esc(c)}" data-c="${esc(c)}" onclick="delRes(this.dataset.c)">✕</button>`:''}</div>${place}</div>`;
   }).join('');
-  const hasComp=d.res.length||d.m.some(m=>m.c),hasPlayers=d.p.some(p=>!p.out);
-  const next=!hasComp?{tab:'partidas',title:'Prepare a temporada',desc:'Adicione um campeonato para começar a registrar os jogos.',button:'Adicionar campeonato'}:!d.m.length?{tab:'partidas',title:'Registre a primeira partida',desc:'Escolha o campeonato, o adversário e informe o placar.',button:'Registrar partida'}:!hasPlayers?{tab:'elenco',title:'Monte seu elenco',desc:'Cadastre os jogadores para acompanhar o desempenho individual.',button:'Cadastrar jogadores'}:{tab:'partidas',title:'Continue sua carreira',desc:'Registre a próxima partida e mantenha a temporada atualizada.',button:'Registrar partida'};
-  return `<section class="next-action"><div><span>PRÓXIMO PASSO</span><b>${next.title}</b><p>${next.desc}</p></div><button class="btn" onclick="go('${next.tab}')">${next.button}</button></section><div class="qa"><button onclick="go('elenco')">${ico('elenco')}<span>Central do elenco</span></button><button onclick="sub.st='f';go('rank')">${ico('fim')}<span>Fechar temporada</span></button></div>
+  return `<div class="qa"><button onclick="go('partidas')">${ico('partidas')}<span>Registrar partida</span></button><button onclick="go('elenco')">${ico('elenco')}<span>Central do elenco</span></button><button onclick="sub.st='s';statsDetailOpenRequest='Fechar temporada';go('rank')">${ico('fim')}<span>Fechar temporada</span></button></div>
   ${pills('home',[['t','Esta temporada'],['c','Carreira toda']],'t')}
   <div class="hero" style="${heroStyle()}"><div><span class="sub2">Aproveitamento${car?' na carreira':''}</span><b class="big">${aprov}%</b></div><div class="hr">${car?'':`<span class="sub2">Últimos jogos</span><div class="dots">${dots||'<span class="sub2">Nenhum jogo ainda</span>'}</div>`}<span class="sub2">Saldo de gols <b class="sd">${saldo>0?'+':''}${saldo}</b></span></div></div>
   <div class="ch0"><h3>${car?'Números da carreira':'Números de '+esc(S.cur)}</h3>${car?'':`<button class="sm" onclick="editT=!editT;render()">${editT?'Concluir':'✎ Editar'}</button>`}</div>
@@ -1051,7 +1126,7 @@ function cloudBox(){
 }
 
 const pills=(k,items,def)=>`<div class="chips pl">${items.map(([v,l])=>`<button type="button" class="chip2${(sub[k]||def)===v?' on':''}" onclick="sub['${k}']='${v}';render()">${l}</button>`).join('')}</div>`;
-const vStats=()=>{const k=sub.st||'t',items=[['t','Da temporada'],['h','Histórico geral'],['c','Comparar jogadores'],['s','Temporadas'],['f','Fechar temporada'],['tr','Troféus e prêmios']];return pills('st',items,'t')+(k==='h'?vHist():k==='c'?vCmp():k==='s'?vTemp():k==='f'?vClose():k==='tr'?vTrof():vRank())};
+const vStats=()=>{let k=sub.st||'t';if(k==='c')k='h';if(k==='f'||k==='tr')k='s';const items=[['t','Estatísticas'],['h','Histórico'],['s','Temporadas']];const body=k==='h'?vHist()+`<details class="stats-extra"><summary>Comparar jogadores</summary>${vCmp()}</details>`:k==='s'?vTemp():vRank();return pills('st',items,'t')+body};
 const vCarr=()=>vStats();
 
 const tfld=(i,t,f,l,ex)=>`<label>${l}<input ${ex||''} value="${esc(t[f]||'')}" onchange="te(${i},'${f}',this.value)"></label>`;
@@ -1091,7 +1166,7 @@ function vTrof(){
   <h2>Prêmios individuais</h2>
   <datalist id="dl-sq">${names.map(n=>`<option value="${esc(n)}">`).join('')}</datalist>
   <details class="add" ${fo.aw||!byS.length?'open':''} ontoggle="fo.aw=this.open"><summary>+ Adicionar prêmio em ${esc(S.cur)}</summary><form onsubmit="return addAw(this)"><label>Prêmio<input name="a" list="dl-aw" autocomplete="off" placeholder="Digite e escolha" required></label><label>Quem recebeu<input name="p" list="dl-sq" autocomplete="off" placeholder="Jogador ou técnico" required></label><label>Competição (opcional)<input name="c" list="dl-comps" autocomplete="off" placeholder="Digite e escolha"></label><button class="btn">Adicionar</button></form></details>
-  ${byS.length?byS.map(([s,l])=>`<h3>${esc(s)}</h3>${l.map(a=>`<div class="row"><span>🏅</span><div>${esc(a.a)}<div class="sub">${esc(a.p)}${a.c?' · '+esc(a.c):''}</div></div><span></span>${s===S.cur?`<button class="x" aria-label="Apagar prêmio" onclick="del('aw',${a.i})">✕</button>`:'<span></span>'}</div>`).join('')}`).join(''):'<p class="empty">Nenhum prêmio registrado.</p>'}
+  ${byS.length?byS.map(([s,l])=>`<details class="season-awards"><summary>${esc(s)} · ${l.length} prêmio${l.length===1?'':'s'}</summary>${l.map(a=>`<div class="row"><span>🏅</span><div>${esc(a.a)}<div class="sub">${esc(a.p)}${a.c?' · '+esc(a.c):''}</div></div><span></span>${s===S.cur?`<button class="x" aria-label="Apagar prêmio" onclick="del('aw',${a.i})">✕</button>`:'<span></span>'}</div>`).join('')}</details>`).join(''):'<p class="empty">Nenhum prêmio registrado.</p>'}
   ${rk.length>1||(rk.length&&rk[0][1]>1)?`<h3>Mais premiados</h3>${rk.map(([n,c])=>`<div class="rw"><span>${esc(n)}</span><b>${c}</b></div>`).join('')}`:''}`;
 }
 
@@ -1100,14 +1175,19 @@ function applyTema(){
   let v=null;try{v=localStorage.getItem('tema')}catch(e){}
   const r=document.documentElement;if(!r)return;
   if(v==='light'||v==='dark')r.setAttribute('data-theme',v);else r.removeAttribute('data-theme');
+  let bg='#e9e2d5';try{bg=localStorage.getItem('fundoClaro')||bg}catch(e){}
+  const light=v==='light'||(v!=='dark'&&(!window.matchMedia||!window.matchMedia('(prefers-color-scheme: dark)').matches));
+  if(light&&okHex(bg)){r.style.setProperty('--bg',bg);r.style.setProperty('--surf',`color-mix(in srgb, ${bg} 82%, white)`);r.style.setProperty('--line',`color-mix(in srgb, ${bg} 70%, #718096)`)}else{r.style.removeProperty('--bg');r.style.removeProperty('--surf');r.style.removeProperty('--line')}
 }
 function setTema(v){try{if(v==='auto')localStorage.removeItem('tema');else localStorage.setItem('tema',v)}catch(e){}applyTema();render()}
+function setLightBg(v){if(okHex(v)){try{localStorage.setItem('fundoClaro',v)}catch(e){}applyTema()}}
 const okHex=x=>/^#[0-9a-f]{6}$/i.test(x||'');
 const txtOn=hex=>{const n=parseInt(hex.slice(1),16),r=n>>16,g=(n>>8)&255,b=n&255;return (0.299*r+0.587*g+0.114*b)>150?'#111827':'#f4f6f2'};
 const hdrStyle=()=>(okHex(S.cor1)?`background:${S.cor1};color:${txtOn(S.cor1)};`:'')+(okHex(S.cor2)?`border-bottom-color:${S.cor2}`:'');
 function appearBox(){
   const t=(()=>{try{return localStorage.getItem('tema')||'auto'}catch(e){return 'auto'}})();
-  return `<details class="bkd" open><summary>🎨 Aparência</summary><p class="sub">Tema (neste aparelho)</p><div class="chips">${[['auto','Automático'],['light','Claro'],['dark','Escuro']].map(([v,l])=>`<button type="button" class="chip2${t===v?' on':''}" onclick="setTema('${v}')">${l}</button>`).join('')}</div>
+  const lightBg=(()=>{try{return localStorage.getItem('fundoClaro')||'#e9e2d5'}catch(e){return '#e9e2d5'}})();
+  return `<details class="bkd" open><summary>🎨 Aparência</summary><p class="sub">Tema (neste aparelho)</p><div class="chips">${[['auto','Automático'],['light','Claro'],['dark','Escuro']].map(([v,l])=>`<button type="button" class="chip2${t===v?' on':''}" onclick="setTema('${v}')">${l}</button>`).join('')}</div><label style="max-width:320px;margin:12px 0">Cor de fundo no modo claro<input type="color" value="${lightBg}" onchange="setLightBg(this.value)" aria-label="Cor de fundo do modo claro"></label><p class="sub">Escolha um tom suave para reduzir o brilho. A cor só se aplica no tema claro.</p>
   <p class="sub">Escudo do clube (aparece no registro de partida)</p><div class="crest"><div class="av">${avMe()}</div><label class="sm">Escolher imagem<input type="file" accept="image/*" hidden onchange="setImg('__crest',this.files[0])"></label>${(S.img&&S.img.__crest)?'<button type="button" class="sm" onclick="delImg(\'__crest\')">Remover</button>':''}</div>
   <p class="sub">Cor do app: botões e destaques (desta carreira)</p><div class="sw8">${ACCS.map(([n,c])=>`<button type="button" class="swc${(okHex(S.acc)?S.acc:ACC0)===c?' on':''}" style="background:${c}" title="${n}" aria-label="${n}" onclick="setAcc('${c}')"></button>`).join('')}<label class="swc custom" title="Outra cor"><input type="color" value="${okHex(S.acc)?S.acc:ACC0}" onchange="setAcc(this.value)" aria-label="Outra cor"></label></div>
   <p class="sub">Cores do topo (desta carreira)</p><div class="ef"><label>Cor principal<input type="color" value="${okHex(S.cor1)?S.cor1:'#14213d'}" onchange="S.cor1=this.value;save();render()"></label><label>Cor de destaque<input type="color" value="${okHex(S.cor2)?S.cor2:'#f2c94c'}" onchange="S.cor2=this.value;save();render()"></label></div>
@@ -1419,7 +1499,7 @@ function vPartidas(){
   const groups=names.map(c=>[c,l.filter(([x])=>(x.c||'')===c)]).filter(([c,ms])=>ms.length);
   const grp=([c,ms])=>{
     const q=recM({m:ms.map(z=>z[0])}),k=ek(c);
-    return `<details class="grp" ${fg[k]===false?'':'open'} ontoggle="fg['${k}']=this.open"><summary>${c?trophy(c,22):''} ${esc(c||'Sem competição')} <span class="sub">· ${ms.length} jogos · ${q.v}V ${q.e}E ${q.l}D · ${q.gp}:${q.gc}</span></summary>${tieSec(c)}${ms.map(rowF).join('')}</details>`;
+    return `<details class="grp" ${fg[k]===true?'open':''} ontoggle="fg['${k}']=this.open"><summary>${c?trophy(c,22):''} ${esc(c||'Sem competição')} <span class="sub">· ${ms.length} jogos · ${q.v}V ${q.e}E ${q.l}D · ${q.gp}:${q.gc}</span></summary>${tieSec(c)}${ms.map(rowF).join('')}</details>`;
   };
   return `<h2>Partidas de ${esc(S.cur)}</h2>
   ${comps.length?`<details class="add" ${fo.m||!d.m.length?'open':''} ontoggle="fo.m=this.open"><summary>+ Registrar partida</summary>
@@ -1429,7 +1509,7 @@ function vPartidas(){
     <label>Competição<select name="c" onchange="updStage();updPen()">${comps.map(c=>`<option ${c===last?'selected':''}>${esc(c)}</option>`).join('')}</select></label>
     <label>Rodada / fase<select name="ph" onchange="rememberStage(this.value);updPen()"></select></label>
    </div>
-   <p class="rule" id="rl"></p>
+   <p class="rule" id="rl"></p><p id="stageErr" class="stage-error" role="alert"></p>
    <div class="vs" id="vsbox">
     <div class="tm" id="tmMe"><span class="lbl"></span><div class="av">${avMe()}</div><div class="nm">${esc(S.club)}</div></div>
     <div class="scs"><div class="sbx"><input class="scb" type="number" name="sl" value="0" min="0" inputmode="numeric" onfocus="this.select()" aria-label="Gols do time da esquerda"><span class="xx">×</span><input class="scb" type="number" name="sr" value="0" min="0" inputmode="numeric" onfocus="this.select()" aria-label="Gols do time da direita"></div><button type="button" class="swapb" onclick="swapSides()">${ico('transf')} Trocar</button></div>
@@ -1465,11 +1545,12 @@ function ed(k){editK=editK===k?null:k;render()}
 const cloneSquad=src=>S.data[src].p.filter(p=>!p.out).map(p=>{const{ovr,base,out,ent,...r}=p;return{...r,id:r.id?r.id+1:0}});
 function impSquad(f){
   const s=f.elements.src.value;if(!s||!S.data[s])return false;
-  cloneSquad(s).forEach(p=>{if(!D().p.some(x=>x.k===p.k))D().p.push(p)});
+  const items=cloneSquad(s).filter(p=>!D().p.some(x=>x.k===p.k));mark('Elenco importado da temporada '+s);items.forEach(p=>D().p.push(p));
   save();render();return false;
 }
 const FOOT=['Direito','Esquerdo','Ambidestro'];
 const TL={compra:'Compra de',venda:'Venda para',empin:'Empréstimo de',empout:'Empréstimo para'};
+function ratingClass(n){if(n==null||n===''||!Number.isFinite(+n))return 'r-none';const v=+n;if(v<6)return 'r'+Math.max(0,Math.floor(v));if(v<6.75)return 'r65';if(v<7.75)return 'r7';if(v<8.75)return 'r8';if(v<9.75)return 'r9';return 'r10'}
 
 function pov(i,f,v){
   const p=D().p[i],au=auto(p);p.base=p.base||{};
@@ -1505,14 +1586,15 @@ function vElenco(){
    
    <details class="ini"><summary>Estatísticas já acumuladas (opcional)</summary><div class="ef">${sx.map(([n,t])=>`<label>${t}<input type="number" name="${n}" min="0"></label>`).join('')}<label>Nota média<input type="number" name="sn" min="0" max="10" step="0.1"></label></div><p class="sub">Para números de antes do app. As partidas registradas daqui para frente somam por cima.</p></details>
    <button class="btn">Adicionar jogador</button></form></details>
-  ${srcs.length?`<details class="add" ${fo.i?'open':''} ontoggle="fo.i=this.open"><summary>⇪ Importar elenco de outra temporada</summary><form onsubmit="return impSquad(this)"><label>Importar elenco de<select name="src">${srcs.map(s=>`<option>${esc(s)}</option>`).join('')}</select></label><button class="btn">Importar jogadores</button></form><p class="sub">Traz quem ainda está no clube, com +1 de idade e estatísticas zeradas. Quem já está aqui não é duplicado.</p></details>`:''}
+
+  ${srcs.length?`<form class="import-squad" onsubmit="return impSquad(this)"><label>Importar jogadores da temporada anterior<select name="src">${srcs.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join('')}</select></label><button class="sm">Importar jogadores</button></form>`:''}
   ${elTools(cnt,sec)}
-  ${l.length?`<div class="scroll"><table><thead><tr><th>Jogador</th><th>Ovr</th><th title="Jogos">J</th><th title="Gols">G</th><th title="Assistências">A</th><th title="Participações em gol: gols + assistências">G+A</th><th title="Participações em gol por jogo">G+A/J</th><th title="Amarelos">🟨</th><th title="Vermelhos">🟥</th><th title="Nota média">Nota</th><th></th></tr></thead><tbody>${l.map(([p,i])=>{
+  ${l.length?`<div class="scroll"><table><thead><tr><th>Jogador</th><th title="Nota média">Nota</th><th>Ovr</th><th title="Jogos">J</th><th title="Gols">G</th><th title="Assistências">A</th><th title="Participações em gol: gols + assistências">G+A</th><th title="Participações em gol por jogo">G+A/J</th><th title="Amarelos">🟨</th><th title="Vermelhos">🟥</th><th></th></tr></thead><tbody>${l.map(([p,i])=>{
     const s=stats(p),o=editK===p.k,b=p.base||{};
     const ni=(f,x)=>`<td><input class="ni${(f==='n'?b.n!=null:!!b[f])?' ov':''}" type="number" min="0" ${f==='n'?'step="0.1" max="10"':''} value="${x}" aria-label="${LB[f]} de ${esc(p.n)}" onchange="pov(${i},'${f}',this.value)"></td>`;
     const ei=(f,lab,t,ex)=>`<label>${lab}<input type="${t}" ${ex||''} value="${esc(p[f]||'')}" onchange="pe(${i},'${f}',${t==='number'?'+this.value':'this.value'})"></label>`;
     const info=[natTag(p.nat),p.id?p.id+'A':'',p.foot?({Direito:'D',Esquerdo:'E',Ambidestro:'Amb'}[p.foot]||p.foot):''].filter(Boolean).join(' · ');
-    return `<tr><td style="box-shadow:inset 4px 0 0 var(--s-${sectorOf(p.pos)})">${p.nr?`<span class="nn">${p.nr}</span> `:''}${esc(p.n)}<div class="sub">${posBadge(p.pos)} ${esc(info)}</div></td><td>${p.ov||'–'}</td>${ni('j',s.j)}${ni('g',s.g)}${ni('a',s.a)}<td>${s.g+s.a}</td><td>${fm2(s.j?(s.g+s.a)/s.j:0)}</td>${ni('y',s.y)}${ni('r',s.r)}${ni('n',s.n==null?'':(+s.n).toFixed(1))}<td class="act"><button class="sm" aria-label="Editar ${esc(p.n)}" onclick="ed(${p.k})">${o?'Fechar':'✎'}</button><button class="x" aria-label="Remover ${esc(p.n)}" onclick="del('p',${i})">✕</button></td></tr>${o?`<tr class="er"><td colspan="11"><div class="ef">${ei('n','Nome','text')}${ei('nr','Número','number','min="1" max="99"')}${ei('nat','Nacionalidade','text','list="dl-nat" autocomplete="off"')}<label>Posição<select onchange="pe(${i},'pos',this.value)">${posOpts(p.pos)}</select></label>${ei('id','Idade','number')}${ei('ov','Overall','number')}<label>Pé<select onchange="pe(${i},'foot',this.value)">${FOOT.map(x=>`<option ${x===p.foot?'selected':''}>${x}</option>`).join('')}</select></label></div></td></tr>`:''}`}).join('')}</tbody></table></div><p class="sub">Os números das estatísticas somam as partidas com o que você já tinha. Digite direto na tabela para corrigir (o campo editado fica destacado). Apagar o campo remove o ajuste. ✎ edita nome, posição, idade e demais dados.</p>`:`<p class="empty">${sec!=='TODOS'?'Nenhum jogador neste setor.':'Elenco vazio nesta temporada. Adicione jogadores acima ou importe de outra temporada.'}</p>`}
+    return `<tr><td style="box-shadow:inset 4px 0 0 var(--s-${sectorOf(p.pos)})">${p.nr?`<span class="nn">${p.nr}</span> `:''}${esc(p.n)}<div class="sub">${posBadge(p.pos)} ${esc(info)}</div></td><td><span class="rating ${ratingClass(s.n)}">${s.nt}</span></td><td>${p.ov||'–'}</td>${ni('j',s.j)}${ni('g',s.g)}${ni('a',s.a)}<td>${s.g+s.a}</td><td>${fm2(s.j?(s.g+s.a)/s.j:0)}</td>${ni('y',s.y)}${ni('r',s.r)}<td class="act"><button class="sm" aria-label="Editar ${esc(p.n)}" onclick="ed(${p.k})">${o?'Fechar':'✎'}</button><button class="x" aria-label="Remover ${esc(p.n)}" onclick="del('p',${i})">✕</button></td></tr>${o?`<tr class="er"><td colspan="11"><div class="ef">${ei('n','Nome','text')}${ei('nr','Número','number','min="1" max="99"')}${ei('nat','Nacionalidade','text','list="dl-nat" autocomplete="off"')}<label>Posição<select onchange="pe(${i},'pos',this.value)">${posOpts(p.pos)}</select></label>${ei('id','Idade','number')}${ei('ov','Overall','number')}<label>Pé<select onchange="pe(${i},'foot',this.value)">${FOOT.map(x=>`<option ${x===p.foot?'selected':''}>${x}</option>`).join('')}</select></label></div></td></tr>`:''}`}).join('')}</tbody></table></div><p class="sub">As notas seguem faixas de cor inspiradas no SofaScore. Os números das estatísticas somam as partidas com o que você já tinha. Digite direto na tabela para corrigir (o campo editado fica destacado). Apagar o campo remove o ajuste.</p>`:`<p class="empty">${sec!=='TODOS'?'Nenhum jogador neste setor.':'Elenco vazio nesta temporada.'}</p>`}
   ${out.length?`<h3>Saíram do clube</h3>${out.map(p=>{const s=stats(p);return `<div class="row"><span></span><div>${esc(p.n)}<div class="sub">${p.out==='venda'?'Vendido':'Cedido por empréstimo'} · ${s.j} jogos · ${s.g} gols · ${s.a} ass.</div></div><span></span><span></span></div>`}).join('')}<p class="sub">Para desfazer uma saída, apague a transferência na aba Transferências.</p>`:''}`;
 }
 
@@ -1531,7 +1613,7 @@ function delT(i){
 }
 
 function vTransf(){
-  const first=S.order[0]===S.cur,tk=so.t||'rec';
+  const tk=so.t||'rec';
   let l=D().t.map((t,i)=>[t,i]);
   if(tk==='rec')l.reverse();
   else if(tk==='valor')l.sort((a,b)=>b[0].v-a[0].v);
@@ -1540,7 +1622,6 @@ function vTransf(){
   const act=D().p.filter(p=>!p.out);
   return `<h2>Transferências de ${esc(S.cur)}</h2>
   <p class="sub">Caixa atual: ${fm(cashBefore()+net(D()))} M</p>
-  ${first?`<div class="bud"><label>Orçamento inicial (milhões)<input type="number" step="any" value="${S.budget}" onchange="S.budget=num(this.value);save();render()"></label></div>`:''}
   <details class="add" ${fo.t||!l.length?'open':''} ontoggle="fo.t=this.open"><summary>+ Registrar transferência</summary>
   <form id="tf" onsubmit="return add('t',this)">
    <label>Tipo<select name="tipo" onchange="updTr()">${Object.entries({compra:'Compra',venda:'Venda',empin:'Empréstimo recebido',empout:'Empréstimo cedido'}).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select></label>
@@ -1573,10 +1654,10 @@ function vHist(){
   }).sort(histCmp);
   const TT={g:0,a:0,ns:0,nw:0};list.forEach(h=>{TT.g+=h.t.g;TT.a+=h.t.a;TT.ns+=h.t.ns;TT.nw+=h.t.nw});
   const tj=S.order.reduce((n,s)=>n+rec(S.data[s]).j,0);
-  const totRow=list.length?`<div class="hrow ht"><span class="hn">Total da carreira</span><span>${S.order.length}</span><span>${tj}</span><span>${TT.g}</span><span>${TT.a}</span><span>${TT.g+TT.a}</span><span>${fm2(tj?(TT.g+TT.a)/tj:0)}</span><span>${TT.nw?(TT.ns/TT.nw).toFixed(1):'–'}</span></div>`:'';
+  const totRow=list.length?`<div class="hrow ht"><span class="hn">Total da carreira</span><span>${S.order.length}</span><span><span class="rating ${ratingClass(TT.nw?TT.ns/TT.nw:null)}">${TT.nw?(TT.ns/TT.nw).toFixed(1):'–'}</span></span><span>${tj}</span><span>${TT.g}</span><span>${TT.a}</span><span>${TT.g+TT.a}</span><span>${fm2(tj?(TT.g+TT.a)/tj:0)}</span></div>`:'';
   return `<h2>Histórico geral</h2><p class="sub">Soma todas as temporadas de cada jogador. Abra um nome para ver a evolução ano a ano.</p>
   ${sortSel('hist',[['j','Jogos'],['g','Gols'],['a','Assistências'],['pg','Participações em gol'],['pgj','G+A por jogo'],['nota','Nota média'],['temp','Temporadas'],['nome','Nome (A–Z)']],'j')}
-  ${list.length?'<div class="scroll"><div class="hlist"><div class="hrow hh"><span></span><span>Temp.</span><span>Jogos</span><span>Gols</span><span>Ass.</span><span title="Participações em gol: gols + assistências">G+A</span><span title="Participações em gol por jogo">G+A/J</span><span>Nota</span></div>'+totRow+list.map(h=>`<details class="ed hd${h.gone?' gone':''}"><summary class="hrow"><span class="hn"><i class="ar">▸</i>${posBadge(h.rows[h.rows.length-1].p.pos)} ${esc(h.n)}${natSub(h)}${h.gone?' <span class="sub">(fora do time)</span>':''}</span><span>${h.rows.length}</span><span>${h.t.j}</span><span>${h.t.g}</span><span>${h.t.a}</span><span>${h.t.g+h.t.a}</span><span>${fm2(h.t.j?(h.t.g+h.t.a)/h.t.j:0)}</span><span>${h.nt}</span></summary><div class="scroll"><table><thead><tr><th>Temporada</th><th>Pos</th><th>Idade</th><th>Ovr</th><th>J</th><th>Gols</th><th>Ast.</th><th>G+A</th><th>G+A/J</th><th>🟨</th><th>🟥</th><th>Nota</th></tr></thead><tbody>${h.rows.map(({s,p,st})=>`<tr><td>${esc(s)}</td><td>${posBadge(p.pos)}</td><td>${p.id||'–'}</td><td>${p.ov||'–'}</td><td>${st.j}</td><td>${st.g}</td><td>${st.a}</td><td>${st.g+st.a}</td><td>${fm2(st.j?(st.g+st.a)/st.j:0)}</td><td>${st.y}</td><td>${st.r}</td><td>${st.nt}</td></tr>`).join('')}</tbody></table></div></details>`).join('')+'</div></div>':'<p class="empty">Sem jogadores ainda. O histórico aparece quando você cadastrar o elenco.</p>'}`;
+  ${list.length?'<div class="scroll"><div class="hlist"><div class="hrow hh"><span></span><span>Temp.</span><span>Nota</span><span>Jogos</span><span>Gols</span><span>Ass.</span><span title="Participações em gol: gols + assistências">G+A</span><span title="Participações em gol por jogo">G+A/J</span></div>'+totRow+list.map(h=>`<details class="ed hd${h.gone?' gone':''}"><summary class="hrow"><span class="hn"><i class="ar">▸</i>${posBadge(h.rows[h.rows.length-1].p.pos)} ${esc(h.n)}${natSub(h)}${h.gone?' <span class="sub">(fora do time)</span>':''}</span><span>${h.rows.length}</span><span><span class="rating ${ratingClass(h.nt)}">${h.nt}</span></span><span>${h.t.j}</span><span>${h.t.g}</span><span>${h.t.a}</span><span>${h.t.g+h.t.a}</span><span>${fm2(h.t.j?(h.t.g+h.t.a)/h.t.j:0)}</span></summary><div class="scroll"><table><thead><tr><th>Temporada</th><th>Nota</th><th>Pos</th><th>Idade</th><th>Ovr</th><th>J</th><th>Gols</th><th>Ast.</th><th>G+A</th><th>G+A/J</th><th>🟨</th><th>🟥</th></tr></thead><tbody>${h.rows.map(({s,p,st})=>`<tr><td>${esc(s)}</td><td><span class="rating ${ratingClass(st.nt)}">${st.nt}</span></td><td>${posBadge(p.pos)}</td><td>${p.id||'–'}</td><td>${p.ov||'–'}</td><td>${st.j}</td><td>${st.g}</td><td>${st.a}</td><td>${st.g+st.a}</td><td>${fm2(st.j?(st.g+st.a)/st.j:0)}</td><td>${st.y}</td><td>${st.r}</td></tr>`).join('')}</tbody></table></div></details>`).join('')+'</div></div>':'<p class="empty">Sem jogadores ainda. O histórico aparece quando você cadastrar o elenco.</p>'}`;
 }
 
 function nextName(){const m=S.cur.match(/^(\d{4})\/(\d{2})$/);if(!m)return '';const y=+m[1]+1;return y+'/'+String((+m[2]+1)%100).padStart(2,'0')}
@@ -1592,25 +1673,29 @@ function vTemp(){
   <h2>Todas as temporadas</h2>
   ${sortSel('s',RECANT,'rec')}
   ${totalSeasons()}
-  ${(so.s==='ant'?[...S.order]:[...S.order].reverse()).map(s=>{const x=S.data[s],r=rec(x),ch=x.res.filter(z=>z.r==='Campeão').map(z=>z.c);return `<div class="row"><span class="sc">${esc(s)}</span><div><div>${r.j} jogos · ${r.v}V ${r.e}E ${r.l}D · ${r.gp}:${r.gc} gols${ch.length?' · '+ch.map(c=>trophy(c,16)+' '+esc(c)).join(', '):''}</div><div class="sub">${esc(x.obs)}</div></div><button class="sm" onclick="tab='partidas';goSeason('${esc(s)}')">Abrir</button>${S.order.length>1?`<button class="x" aria-label="Apagar temporada ${esc(s)}" onclick="delSeason('${esc(s)}')">✕</button>`:'<span></span>'}</div>`}).join('')}`;
+  ${(so.s==='ant'?[...S.order]:[...S.order].reverse()).map(s=>{const x=S.data[s],r=rec(x),ch=x.res.filter(z=>z.r==='Campeão').map(z=>z.c);return `<div class="row"><span class="sc">${esc(s)}</span><div><div>${r.j} jogos · ${r.v}V ${r.e}E ${r.l}D · ${r.gp}:${r.gc} gols${ch.length?' · '+ch.map(c=>trophy(c,16)+' '+esc(c)).join(', '):''}</div><div class="sub">${esc(x.obs)}</div></div><button class="sm" onclick="tab='partidas';goSeason('${esc(s)}')">Abrir</button>${S.order.length>1?`<button class="x" aria-label="Apagar temporada ${esc(s)}" onclick="delSeason('${esc(s)}')">✕</button>`:'<span></span>'}</div>`}).join('')}
+  <details class="stats-extra" ${sub.openStatsPanel==='close'?'open':''}><summary>Fechar temporada</summary>${vClose()}</details>
+  <details class="stats-extra"><summary>Troféus e prêmios</summary>${vTrof()}</details>`;
 }
 
-let renderedTab=null,detailStates={};
+let renderedTab=null,detailStates={},statsDetailOpenRequest=null;
 function detailKey(el){return (el.querySelector(':scope > summary')?.textContent||'').trim().replace(/\s+·.*$/,'').replace(/\s+\(\d+\)$/,'')}
 function render(){
   const app=document.getElementById('app');
   if(app&&renderedTab){const counts={},state={};app.querySelectorAll('details').forEach(el=>{const title=detailKey(el),n=counts[title]||0;counts[title]=n+1;state[title+'#'+n]=el.open});detailStates[renderedTab]=state}
-  applyAcc();queueMicrotask(()=>{ui();armPickers();flashNow();bkOpen=false});
+  applyAcc();queueMicrotask(()=>{ui();armPickers();flashNow();bkOpen=false;translateUi()});
   document.getElementById('top').innerHTML=head();
   document.getElementById('tabs').innerHTML=navHtml();
   const v={home:vHome,partidas:vPartidas,elenco:vElenco,transf:vTransf,rank:vStats,carreira:vCarr,config:vConfig}[tab]();
   app.innerHTML=banner()+v;
-  const saved=detailStates[tab]||{},counts={};app.querySelectorAll('details').forEach(el=>{const title=detailKey(el),n=counts[title]||0;counts[title]=n+1;el.open=!!saved[title+'#'+n]});
+  const saved=detailStates[tab]||{},counts={};app.querySelectorAll('details').forEach(el=>{const title=detailKey(el),n=counts[title]||0;counts[title]=n+1;const key=title+'#'+n;if(Object.prototype.hasOwnProperty.call(saved,key))el.open=saved[key]});
+  if(statsDetailOpenRequest){if(statsDetailOpenRequest.startsWith('comp-season:')){const season=statsDetailOpenRequest.slice(12);app.querySelectorAll('.comp-season-group').forEach(el=>{if(detailKey(el)===season)el.open=true})}else app.querySelectorAll('details').forEach(el=>{if(detailKey(el)===statsDetailOpenRequest)el.open=true});statsDetailOpenRequest=null}
   renderedTab=tab;
 }
 
 function add(k,f,event){
   const o=Object.fromEntries(new FormData(f)),d=D();
+  if(k==='m'&&hasDuplicateMatch(o.c,o.ph)){const er=document.getElementById('stageErr');if(er)er.textContent='Já existe uma partida desta competição registrada nessa rodada/fase.';return false}
   if(k==='m'){if(!(o.adv||'').trim()){const er=document.getElementById('vserr');if(er)er.textContent='Escolha o adversário: toque no círculo com +.';return false}const away=o.away==='1',sl=+o.sl||0,sr=+o.sr||0;d.m.push({adv:o.adv.trim(),loc:isNeutro(o.ph)?'Neutro':(away?'Fora':'Casa'),gp:away?sr:sl,gc:away?sl:sr,c:(o.c||'').trim(),ph:o.ph||'',pg:pn(o.pg),pc:pn(o.pc),pl:draft});draft={};FL=()=>document.querySelector('[data-mi="'+(D().m.length-1)+'"]')}
   if(k==='p'){const b={};[['sj','j'],['sg','g'],['sa','a'],['sy','y'],['sr','r']].forEach(([x,f])=>{if(+o[x])b[f]=+o[x]});if(o.sn!==undefined&&o.sn!=='')b.n=+o.sn;const np={n:o.n.trim(),nr:+o.nr||0,nat:(o.nat||'').trim(),pos:o.pos,id:+o.id||0,ov:+o.ov||0,foot:o.foot,k:nk()};if(Object.keys(b).length)np.base=b;d.p.push(np)}
   if(k==='r'&&o.c.trim()){const c=o.c.trim(),r=(o.r||'').trim(),x=d.res.find(y=>y.c===c);if(x){if(r)x.r=r}else d.res.push({c,r})}

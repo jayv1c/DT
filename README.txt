@@ -19,6 +19,18 @@ PUBLICAÇÃO SIMPLES (GitHub Pages)
 6. Aguarde a publicação e abra o endereço HTTPS fornecido pelo GitHub Pages no Chrome do Android.
 7. No Chrome, abra o menu ⋮ e escolha Instalar app ou Adicionar à tela inicial.
 
+ATUALIZAR O SITE EM VERSÕES FUTURAS
+
+Não crie outro repositório nem configure o Pages novamente. Para publicar uma versão nova:
+1. Faça as alterações nesta pasta do projeto e salve os arquivos.
+2. Abra no GitHub o mesmo repositório que publica o app.
+3. Na página Code, clique em Add file > Upload files.
+4. Envie os arquivos que foram alterados, mantendo os mesmos caminhos e pastas. Por exemplo, index.html fica na raiz e service-worker.js também. Se houver novos ícones ou imagens, envie-os dentro das pastas correspondentes.
+5. Em Commit changes, escreva uma mensagem como “Atualiza o Diário do Técnico” e confirme o commit na branch main (ou na branch que o Pages já usa).
+6. O GitHub Pages publica as mudanças automaticamente a partir da branch e pasta configuradas. Aguarde alguns minutos e abra novamente o mesmo endereço do app.
+
+No celular, feche e abra o app ou atualize a página para carregar a versão nova. Continue usando o mesmo endereço e não desinstale o PWA nem limpe os dados do site durante uma atualização: os registros da carreira ficam no armazenamento local desse navegador/aparelho.
+
 USO OFFLINE
 Abra o app online pelo menos uma vez para o navegador armazenar os arquivos. Depois, o app shell poderá abrir sem internet. Recursos externos, como fontes do Google e sincronização em nuvem, podem exigir conexão.
 
@@ -54,3 +66,12 @@ FLUXO DE USO
 - Estatísticas permite filtrar retrospecto e recordes por temporada, competição e mando. Os rankings individuais usam o total da temporada selecionada.
 - Para proteger os dados, baixe um arquivo JSON ou copie o backup. Para restaurar, selecione o arquivo ou cole o texto em Configurações > Backup dos dados.
 - A busca da seção Bases de dados e skins foi removida. Os clubes e competições podem ser percorridos pelas listas recolhíveis.
+- Imagens personalizadas ficam salvas no aparelho/navegador. Para levá-las entre PC e celular, baixe um backup em Configurações > Backup dos dados e restaure esse arquivo no outro aparelho. No mesmo site, use o mesmo arquivo de backup para incluir temporadas, partidas e imagens; publicar os arquivos no GitHub sozinho não transfere os dados locais.
+- A aparência permite escolher uma cor de fundo mais suave para o modo claro. A preferência é salva separadamente em cada aparelho.
+- A versão atual é 1.4.1 e aparece em Configurações > Idioma e versão. O idioma da interface pode ser escolhido entre português, espanhol e inglês; nomes próprios e registros da carreira continuam como foram cadastrados.
+- Estatísticas incluem um resumo de cada competição em cada temporada, com jogos, vitórias, empates, derrotas, gols e resultado/colocação registrados.
+- A aba Elenco permite importar jogadores de temporadas anteriores para a temporada atual, sem duplicar quem já está nela.
+- Estatísticas podem ser minimizadas e os campeonatos são organizados por temporada, com opção para escolher uma temporada específica.
+- Nas competições europeias em formato antigo, informe a posição no grupo no Resumo para liberar o caminho correspondente. O 3º lugar da Champions habilita o playoff da Europa League; o 3º da Europa habilita o playoff da Conference League. A Champions não ganha uma fase de playoff própria.
+- O app bloqueia mais de uma partida na mesma competição e rodada/fase, inclusive ao editar uma partida existente. Em confrontos de ida e volta, cada perna aparece como fase separada.
+- A lista de jogadores selecionados em cada partida mostra a nota com a faixa de cor correspondente.
